@@ -1,9 +1,9 @@
-console.log("LogBox:", logBox);
 
 const socket = io();
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 const logBox = document.getElementById("logBox");
+console.log("LogBox:", logBox);
 
 let player = { x: 100, y: 100 };
 let otherPlayer = { x: 200, y: 200 };
