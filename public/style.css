@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: #1e1e1e;
+  color: white;
+}
+
+/* Main Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left Game Area */
+.game-area {
+  flex: 3;
+  padding: 20px;
+}
+
+/* Right Log Panel */
+.log-panel {
+  flex: 1;
+  background: #111;
+  border-left: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Log Header */
+.log-header {
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+  background: #181818;
+  text-align: center;
+}
+
+/* Log Box */
+#logBox {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  font-size: 12px;       /* smaller text */
+  line-height: 1.1;      /* tighter lines */
+}
+
+/* Each log line */
+#logBox p {
+  margin: 0;             /* remove spacing */
+  padding: 0;
+}

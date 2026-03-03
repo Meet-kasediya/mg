@@ -2,11 +2,23 @@
 <html>
 <head>
   <title>Kickstarting...</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>PLAYING: </h1>
-  <canvas id="game" width="500" height="500"></canvas>
-  <div id="logBox" style="height:150px; overflow:auto; border:1px solid black; margin-top:10px;"></div>
+  <div class="container">
+    
+    <div class="game-area">
+      <h1>PLAYING:</h1>
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="log-panel">
+      <div class="log-header">GAME LOG</div>
+      <div id="logBox"></div>
+    </div>
+
+  </div>
+
   <script src="/socket.io/socket.io.js"></script>
   <script src="game.js"></script>
 </body>

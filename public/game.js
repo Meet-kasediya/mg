@@ -25,7 +25,7 @@ socket.on("log", (message) => {
   console.log("LOG RECEIVED:", message);
 
   const p = document.createElement("p");
-  p.textContent = message;
+p.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
   logBox.appendChild(p);
   logBox.scrollTop = logBox.scrollHeight;
 });
