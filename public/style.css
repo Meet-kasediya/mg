@@ -14,7 +14,9 @@ body {
 /* Left Game Area */
 .game-area {
   flex: 3;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 /* Right Log Panel */
@@ -48,4 +50,11 @@ body {
 #logBox p {
   margin: 0;             /* remove spacing */
   padding: 0;
+}
+
+
+#gameCanvas {
+  flex: 1;
+  background: #1a1a1a;
+  display: block;
 }
