@@ -16,7 +16,7 @@ io.on("connection", (socket) => {
   socket.on("move", (data) => {
     socket.broadcast.emit("playerMove", data);
 
-    io.emit("log", `${socket.id} moved`);
+    io.emit("log", `${socket.id} moved`); 
   });
 
   socket.on("disconnect", () => {
@@ -31,3 +31,7 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+setInterval(() => {
+  io.emit("log", "TEST MESSAGE");
+}, 3000);

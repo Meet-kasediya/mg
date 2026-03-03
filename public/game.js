@@ -1,6 +1,9 @@
+console.log("LogBox:", logBox);
+
 const socket = io();
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
+const logBox = document.getElementById("logBox");
 
 let player = { x: 100, y: 100 };
 let otherPlayer = { x: 200, y: 200 };
@@ -16,6 +19,15 @@ document.addEventListener("keydown", (e) => {
 
 socket.on("playerMove", (data) => {
   otherPlayer = data;
+});
+
+socket.on("log", (message) => {
+  console.log("LOG RECEIVED:", message);
+
+  const p = document.createElement("p");
+  p.textContent = message;
+  logBox.appendChild(p);
+  logBox.scrollTop = logBox.scrollHeight;
 });
 
 function draw() {
